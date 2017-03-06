@@ -181,6 +181,7 @@ sonar:
   expose:
     - "9000"
   environment:
+    - "ADOP_LDAP_ENABLED=true"
     - "dependency:container==sonar-mysql"
     - "SONARQUBE_JDBC_USERNAME=${SONAR_MYSQL_USER}"
     - "SONARQUBE_JDBC_PASSWORD=${SONAR_MYSQL_PASSWORD}"

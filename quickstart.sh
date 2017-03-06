@@ -48,7 +48,7 @@ provision_local() {
         echo "Docker machine '$MACHINE_NAME' already exists"
     else
 	# To run adop stack locally atleast 6144 MB is required.
-        docker-machine create --driver virtualbox --virtualbox-memory 6144 ${MACHINE_NAME}
+        docker-machine create --driver virtualbox --virtualbox-memory 6144  --virtualbox-disk-size "25000" ${MACHINE_NAME}
     fi
 
     # Reenable errexit
